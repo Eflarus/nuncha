@@ -781,3 +781,12 @@ p {
 .sr {
   width: 0;
 }
+
+
+.slide--316__content {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  gap: 140px;
+}
