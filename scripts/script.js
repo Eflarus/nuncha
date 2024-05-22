@@ -48,6 +48,20 @@ const toggleAudio = () => {
   console.log(SOUNDS.DANCE.muted);
 };
 
+const playDanse = () => {
+  if (!SOUNDS.DANCE.muted) {
+    SOUNDS.DANCE.play();
+    SOUNDS.DANCE.volume = 0.99;
+  }
+};
+
+const toggleWPlayAudio = () => {
+  toggleAudio();
+  if (!SOUNDS.DANCE.muted) {
+    SOUNDS.DANCE.play();
+    SOUNDS.DANCE.volume = 0.99;
+  }
+}
 let config = { strength: 0 };
 
 gsap.to(".slide--312", {
