@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>CodePen - Parallax scroll animation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -31,6 +32,8 @@
         <section class="s20 sr">20</section>
         <section class="s21 sc">21</section>
         <section class="s22 sr">22</section>
+
+        <section class="s231 sc">231</section>
         <section class="s23 sc">23</section>
         <section class="s24 sr">24</section>
         <section class="s25 sc">25</section>
@@ -41,6 +44,7 @@
         <section class="s30 sr">30</section>
         <section class="s31 sc">31</section>
       </div>
+
       <div class="content">
         <div class="redp"></div>
         <div class="redp2"></div>
@@ -51,28 +55,32 @@
                 <img class="nav-rect" src="./img/arrr.svg" />
               </a>
               <a class="hamb-btn nav-btn" onclick="toggleNav()">
-                <img class="nav-rect" src="./img/hamb.svg">
+                <img class="nav-rect" src="./img/hamb.svg" />
               </a>
 
               <div class="intro__nav-wrapper-popup">
-                <p class="slide_text" onclick="scrollToElementById('slide-0')">фоторепортаж зарождение</p>
+                <p class="slide_text" onclick="scrollToElementById('slide-0')">
+                  фоторепортаж зарождение
+                </p>
                 <p class="slide_text">фотопроект алла сигалова</p>
-                <p class="slide_text" onclick="scrollToElementById('slide-30')">фоторепортаж вечная жизнь</p>
+                <p class="slide_text" onclick="scrollToElementById('slide-30')">
+                  фоторепортаж вечная жизнь
+                </p>
               </div>
             </header>
-            <section class=" slide--0" id="slide-0">
+            <section class="slide--0" id="slide-0">
               <div class="intro__content">
                 <div class="intro__nav-wrapper smh">
-                  <p class="slide_text">фоторепортаж<br />зарождение</p>
+                  <p class="slide_text" onclick="scrollToElementById('slide-0')">фоторепортаж<br />зарождение</p>
                   <p class="slide_text">фотопроект<br />алла сигалова</p>
-                  <p class="slide_text">фоторепортаж<br />вечная жизнь</p>
+                  <p class="slide_text"onclick="scrollToElementById('slide-30')">фоторепортаж<br />вечная жизнь</p>
                 </div>
                 <div class="intro_group">
                   <h1 class="intro__title">Нунча</h1>
                   <h2 class="intro__subtitle">зарождение</h2>
                 </div>
                 <div class="intro_group">
-                  <div class="intro__btn-wrapper">
+                  <div class="intro__btn-wrapper" id="volume" onclick="toggleAudio()">
                     <div class="sound_button intro__btn"></div>
                     <p class="slide_text">включить аудио<br />сопровождение</p>
                   </div>
@@ -80,7 +88,8 @@
                   <h2 class="intro__subtitle smh">фоторепортаж</h2>
                 </div>
               </div>
-              <img class="intro__img" src="./img/9.jpg" />
+              <img class="intro__img smh" src="./img/9.jpg" />
+              <img class="intro__img mdh" src="./img/n-mob.jpg" />
             </section>
 
             <section class="slide--1" id="slide-1">
@@ -179,19 +188,19 @@
               </div>
             </section>
 
-            <section class="slide--30 " id="slide-30">
+            <section class="slide--30" id="slide-30">
               <div class="intro__content">
                 <div class="intro__nav-wrapper">
-                  <p class="slide_text">фоторепортаж<br />зарождение</p>
+                  <p class="slide_text" onclick="scrollToElementById('slide-0')">фоторепортаж<br />зарождение</p>
                   <p class="slide_text">фотопроект</p>
-                  <p class="slide_text">фоторепортаж<br />вечная жизнь</p>
+                  <p class="slide_text" onclick="scrollToElementById('slide-30')">фоторепортаж<br />вечная жизнь</p>
                 </div>
                 <div class="intro_group">
                   <h1 class="intro__title">Нунча</h1>
                   <h2 class="intro__subtitle">вечная жизнь</h2>
                 </div>
                 <div class="intro_group">
-                  <div class="intro__btn-wrapper">
+                  <div class="intro__btn-wrapper" onclick="toggleAudio()">
                     <div class="sound_button intro__btn"></div>
                     <p class="slide_text">включить аудио<br />сопровождение</p>
                   </div>
@@ -315,11 +324,13 @@
                 />
                 <div class="col-txt">
                   <p class="s3_text txt-1">
-                    Умолкает птица.  Наступает вечер.  Раскрывает веер испанская
-                    танцовщица. 
+                    Умолкает птица.<br> 
+                    Наступает вечер.<br> 
+                    Раскрывает веер<br>
+                    испанская танцовщица.
                   </p>
                   <p class="s3_text txt-2">
-                    Звучат удары луны из бубна,  и глухо, дробно вторят гитары
+                    Звучат удары луны из бубна,<br> и глухо, дробно вторят гитары
                   </p>
                 </div>
                 <img
@@ -385,8 +396,11 @@
                   />
                   <div class="col-txt">
                     <h3>Нунча в ярости<br />крикнула —</h3>
-                    
-                    <h3>посмотрим,чье<br /> сердце сильнее!</h3>
+
+                    <h3>
+                      посмотрим,чье<br />
+                      сердце сильнее!
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -416,16 +430,24 @@
                   src="./img/nw.svg"
                 />
               </div>
+              <div class="sound_button" id="sound_button_sm" onclick="toggleAudio()"></div>
+            </section>
+
+            <section class="slide--3131 s3" id="slide-3131">
+              <div
+                class="slide--3131__content slide--s3__content slide__content"
+              >
+                <img
+                  class="slide--3131__img1 slide--s3__img imgl"
+                  src="./img/slide_312-1.jpg"
+                />
+              </div>
             </section>
 
             <section class="slide--313 s3" id="slide-313">
               <div
                 class="slide--313__content slide--s3__content slide__content"
               >
-                <img
-                  class="slide--313__img1 slide--s3__img imgl"
-                  src="./img/slide_312-1.jpg"
-                />
                 <p class="s3_text">
                   Уже с первых минут стало ясно, <br />
                   что дочь уступит матери в <br />
@@ -483,11 +505,9 @@
               <div
                 class="slide--316__content slide--s3__content slide__content"
               >
-    
                 <h3 class="s3_h3">
-                    завертелась Нунча,<br />
-                    извиваясь, как змея
-                  
+                  завертелась Нунча,<br />
+                  извиваясь, как змея
                 </h3>
               </div>
             </section>
@@ -496,16 +516,16 @@
               <div
                 class="slide--317__content slide--s3__content slide__content"
               >
-                  <img
-                    class="slide--317__img1 slide--s3__img imgl"
-                    src="./img/slide_316-1.jpg"
-                  />
-                  <p class="s3_text">
-                    Глубоко понимала она этот танец <br />
-                    страсти, и велико было наслаждение <br />
-                    видеть, как живет, играет ее прекрасное <br />
-                    непобедимое тело
-                  </p>
+                <img
+                  class="slide--317__img1 slide--s3__img imgl"
+                  src="./img/slide_316-1.jpg"
+                />
+                <p class="s3_text">
+                  Глубоко понимала она этот танец <br />
+                  страсти, и велико было наслаждение <br />
+                  видеть, как живет, играет ее прекрасное <br />
+                  непобедимое тело
+                </p>
               </div>
             </section>
 
@@ -513,14 +533,14 @@
               <div
                 class="slide--318__content slide--s3__content slide__content"
               >
-              <h3 class="s3_h3 p1">
-                Нунча летом прошлого <br />года умерла на улице <br />во время танца 
-              </h3>
-            </h3>
+                <h3 class="s3_h3 p1">
+                  Нунча летом прошлого <br />года умерла на улице <br />во время
+                  танца
+                </h3>
+
                 <h3 class="s3_h3 p2">
                   редко бывает,<br />
-                  чтоб человек умер <br />так..! 
-                  </h3>
+                  чтоб человек умер <br />так..!
                 </h3>
               </div>
             </section>
