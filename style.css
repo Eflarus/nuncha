@@ -18,6 +18,11 @@
 html {
   box-sizing: border-box;
 }
+* {
+  scrollbar-color: transparent transparent; /* Thumb and track color */
+  scrollbar-width: thin; /* Width of the scrollbar */
+}
+
 *,
 *:before,
 *:after {
@@ -114,8 +119,10 @@ p {
 
 .header {
   position: absolute;
+  justify-content: space-between;
   top: 52px;
   left: 112px;
+  right: 112px;
   z-index: 100;
   display: flex;
 }
@@ -123,15 +130,46 @@ p {
   display: block;
   height: 64px;
   width: 64px;
+}
+.hamb-btn {
+  display: block;
+  height: 64px;
+  width: 64px;
+  display: none;
+}
+
+.nav-btn img {
+  height: 32px;
+  width: 100%;
+}
+
+.nav-open {
+  display: flex;
   position: absolute;
+  top: 20px;
+  width: 80vw;
+  left: 10vw;
+  background: rgba(0, 0, 0, 0.733);
+  padding: 12px;
+  border-radius: 12px;
+  flex-direction: column;
+}
+.nav-open p {
+  text-align: center;
+  line-height: 2;
 }
 @media all and (max-width: 768px) {
   .header {
-    display: block;
     left: 16px;
     top: 36px;
+    right: 16px;
   }
   .back-arrow {
+    height: 30px;
+    width: 30px;
+  }
+  .hamb-btn {
+    display: block;
     height: 30px;
     width: 30px;
   }
@@ -174,22 +212,22 @@ p {
 }
 
 .intro__img {
-  position: absolute;
-  min-width: 50vw;
+  /* position: absolute; */
+  /* min-width: 50vw; */
   min-height: 100svh;
   z-index: 2;
-  right: 50%;
-  top: 0;
+  /* right: 50%; */
+  /* top: 0; */
 }
 .intro__content {
-  position: absolute;
-  left: 52%;
+  /* position: absolute; */
+  /* left: 52%; */
   z-index: 3;
-  top: 52px;
+  /* top: 52px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 90%;
+  height: 100%;
 }
 
 .intro__nav-wrapper {
@@ -203,6 +241,20 @@ p {
 }
 .intro__nav-wrapper p {
   text-align: center;
+}
+
+.intro__nav-wrapper-popup {
+  display: none;
+}
+@media (max-width: 767px) {
+  .intro__nav-wrapper {
+    display: none; /* Hide the wrapper */
+  }
+
+  .hamburger-icon {
+    /* Assuming you have a hamburger icon element */
+    display: block; /* Show the hamburger icon */
+  }
 }
 
 .intro__title {
@@ -222,6 +274,74 @@ p {
   /* margin: auto; */
 }
 
+.slide--0,
+.slide--30 {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.slide--0 .intro__content,
+.slide--0 .intro__img,
+.slide--30 .intro__content,
+.slide--30 .intro__img {
+  position: inherit;
+  min-height: 100svh;
+  flex: 50% 0;
+}
+.slide--0 .intro__content,
+.slide--30 .intro__content {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  padding-left: 8px;
+}
+
+@media all and (max-width: 768px) {
+  .slide--0 .intro__content,
+  .slide--30 .intro__content {
+    padding: 0;
+  }
+  .smh {
+    display: none;
+  }
+  .slide--0,
+  .slide--30 {
+    flex-direction: column;
+  }
+  .slide--0 .intro__content,
+  .slide--30 .intro__content {
+    min-height: 40vh;
+  }
+  .slide--0 .intro__img,
+  .slide--30 .intro__img {
+    min-height: 60vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+  .intro__title {
+    margin-top: 10vh;
+    font-size: 64px;
+    text-align: center;
+  }
+  .intro__subtitle {
+    font-size: 32px;
+    text-align: center;
+  }
+  .slide_text,
+  .intro__txt,
+  .s3_text {
+    font-size: 14px;
+  }
+  .sound_button {
+    height: 50px;
+    width: 50px;
+    background-size: 20px;
+    border-width: 2px;
+  }
+  .intro__btn-wrapper {
+    max-width: 90vw;
+    justify-content: center;
+  }
+}
 .slide--1__img1 {
   height: 18vw;
   width: 25vw;
@@ -547,7 +667,7 @@ p {
 .slide--s3__content {
   height: 100%;
   align-content: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -769,10 +889,18 @@ p {
   max-height: 60vh;
 }
 
+.slide--316__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+
 .slide--318__content {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   gap: 140px;
 }
@@ -782,11 +910,120 @@ p {
   width: 0;
 }
 
+/* for 738px */
+@media (max-width: 768px) {
+  .s3 p,
+  .slide--37__content .s3_text,
+  .s3_text {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 
-.slide--316__content {
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  gap: 140px;
+  .slide--33__content .rcol p,
+  .slide--33__content h3,
+  .slide--34__content .rcol p,
+  .slide--310 h3 {
+    font-size: 15px;
+  }
+
+  .slide--33__content,
+  .slide--34__content,
+  .slide--37__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .slide--33__content .rcol,
+  .slide--34__content .rcol {
+    width: 333px;
+    padding-left: 0;
+  }
+  .slide--33__content .lcol,
+  .slide--34__content .lcol {
+    width: 333px;
+    height: 222px;
+    background-size: 333px 222px;
+  }
+  .slide--33__content .lcol img,
+  .slide--34__content .lcol img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide--34__content .rcol p {
+    text-align: start;
+  }
+
+  .slide--37__content img {
+    max-height: 40vh;
+  }
+  .slide--37__content p {
+    max-width: 56vw;
+    margin: auto;
+  }
+  .slide--37__content .txt-1, 
+  .slide--37__content .txt-2 {
+    font-size: 15px;
+  }
+  .slide--39__content .pair-txt { 
+    flex-direction: column;
+  }
+  .slide--39__content .pair-txt p {
+    width: 100%;
+  }
+  .slide--310__content {
+    flex-direction: column;
+  }
+  .slide--310 .col-l, .slide--310 .col-r {
+    width: 65vw;
+    gap: 12px;
+  }
+  .slide--313__content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide--313__content .s3_text {
+    flex: inherit;
+  }
+  .slide--313__img1, 
+  .slide--313__img2 {
+    width: 200px !important;
+  }
+  .slide--314__content .gal-3 {
+    flex-direction: column;
+    width: 70vw;
+  }
+  .slide--314__content img {
+    max-height: 25vh;
+  }
+  .slide--314__content h2 {
+    font-size: 36px;
+    rotate: -90deg;
+    width: 0vh;
+    margin-top: 76vh;
+  }
+  .slide--314__content {
+    flex-direction: row;
+    gap: 0;
+    height: 100vh;
+  }
+  .slide--314__content img {
+    width: 40vw;
+  }
+
+  .slide--315__content{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .slide--36__content .pair-txt {
+    flex-direction: column;
+  }
+
+  .slide--36__content .pair-txt p:first-child {
+    text-align: end;
+    margin-left: auto;
+  }
 }
