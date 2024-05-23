@@ -39,19 +39,42 @@ ScrollTrigger.defaults({
 
 const SOUNDS = {
   DANCE: new Audio("https://microcosm.pro/content/files/sounds/dance.mp3"),
+  SARASATE: new Audio(
+    "https://microcosm.pro/content/files/sounds/sarasate.mp3"
+  ),
 };
 
 SOUNDS.DANCE.muted = true;
+SOUNDS.SARASATE.muted = true;
 
 const toggleAudio = () => {
   SOUNDS.DANCE.muted = !SOUNDS.DANCE.muted;
   console.log(SOUNDS.DANCE.muted);
+};
+const toggleAudio1 = () => {
+  SOUNDS.SARASATE.muted = !SOUNDS.SARASATE.muted;
+  console.log(SOUNDS.SARASATE.muted);
+};
+
+const playSarasa = () => {
+  if (!SOUNDS.SARASATE.muted) {
+    SOUNDS.SARASATE.play();
+    SOUNDS.SARASATE.volume = 0.99;
+  }
 };
 
 const playDanse = () => {
   if (!SOUNDS.DANCE.muted) {
     SOUNDS.DANCE.play();
     SOUNDS.DANCE.volume = 0.99;
+  }
+};
+
+const toggleWPlayAudio1 = () => {
+  toggleAudio1();
+  if (!SOUNDS.SARASATE.muted) {
+    SOUNDS.SARASATE.play();
+    SOUNDS.SARASATE.volume = 0.99;
   }
 };
 
@@ -62,7 +85,129 @@ const toggleWPlayAudio = () => {
     SOUNDS.DANCE.volume = 0.99;
   }
 };
+
 let config = { strength: 0 };
+
+gsap.from(
+  "#sound_button_sm1",
+  {
+    ease: "power4",
+    scrollTrigger: {
+      trigger: ".s2",
+      scrub: true,
+      start: "top center",
+      end: "top top",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
+    height: "0px",
+  },
+  0
+);
+
+gsap.fromTo(
+  "#sound_button_sm1",
+  {
+    ease: "power4",
+    scrollTrigger: {
+      trigger: ".s2",
+      scrub: true,
+      start: "top center",
+      end: "top top",
+      toggleActions: "play none reverse none",
+    },
+    x: "100vw",
+  },
+  {
+    ease: "power4",
+    scrollTrigger: {
+      trigger: ".s2",
+      scrub: true,
+      start: "top center",
+      end: "top top",
+      toggleActions: "play none reverse none",
+    },
+    x: "0vw",
+  },
+  0
+);
+
+gsap.fromTo(
+  "#sound_button_sm1",
+  {
+    ease: "power4",
+    scrollTrigger: {
+      trigger: ".s9",
+      scrub: true,
+      start: "center center",
+      end: "center top",
+      toggleActions: "play none reverse none",
+    },
+    x: "0vw",
+    display: "block",
+  },
+  {
+    ease: "power4",
+    scrollTrigger: {
+      trigger: ".s9",
+      scrub: true,
+      start: "center center",
+      end: "center top",
+      toggleActions: "play none reverse none",
+    },
+    x: "100vw",
+    opacity: 0,
+    display: "none",
+  },
+  0
+);
+
+gsap.fromTo(
+  ".colScroll",
+  {
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".s1",
+      scrub: true,
+      start: "top center",
+      end: "center top",
+      onEnter: () => {
+        console.log("onEnter");
+        playSarasa();
+      },
+      onEnterBack: () => {
+        console.log("onEnterBack");
+        playSarasa();
+      },
+    },
+  },
+  {
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".s9",
+      scrub: true,
+      start: "top center",
+      end: "center top",
+
+      onLeave: () => {
+        console.log("onLeave");
+        var fadeOut = setInterval(function () {
+          if (SOUNDS.SARASATE.volume > 0.1) {
+            SOUNDS.SARASATE.volume -= 0.1;
+          } else {
+            clearInterval(fadeOut);
+            SOUNDS.SARASATE.pause();
+          }
+        }, 100);
+      },
+      onEnterBack: () => {
+        console.log("onEnterBack");
+        playSarasa();
+      },
+    },
+  },
+  0
+);
 
 gsap.to(".slide--312", {
   ease: "none",
@@ -73,10 +218,7 @@ gsap.to(".slide--312", {
     end: "center top",
     onEnter: () => {
       console.log("onEnter");
-      if (!SOUNDS.DANCE.muted) {
-        SOUNDS.DANCE.play();
-        SOUNDS.DANCE.volume = 0.99;
-      }
+      playDanse();
     },
     onLeaveBack: () => {
       console.log("onLeaveBack");
@@ -102,10 +244,7 @@ gsap.to(".slide--312", {
     },
     onEnterBack: () => {
       console.log("onEnterBack");
-      if (!SOUNDS.DANCE.muted) {
-        SOUNDS.DANCE.play();
-        SOUNDS.DANCE.volume = 0.99;
-      }
+      playDanse();
     },
   },
 });
@@ -142,6 +281,7 @@ gsap.to(
     x: "100vw",
     opacity: 0,
     ease: "expo.inOut",
+    toggleActions: "play none reverse none",
   },
   2
 );
@@ -154,6 +294,7 @@ gsap.to(
       start: "top top",
       end: "bottom center",
       scrub: true,
+      toggleActions: "play none reverse none",
     },
     x: "-100vw",
     opacity: 0,

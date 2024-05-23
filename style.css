@@ -205,6 +205,18 @@ p {
   background-size: 45px;
   background-position: center;
 }
+
+#sound_button_sm1{
+  position: sticky;
+  float: inline-end;
+  right: 12px;
+  top: 12px;
+  z-index: 100;
+  opacity: 1;
+}
+
+
+
 .intro__txt {
   max-width: 35vw;
 }
