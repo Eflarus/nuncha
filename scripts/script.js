@@ -126,7 +126,7 @@ function scrollToElementById(elementId) {
     },
     2
   );
-  toggleNav()
+  toggleNav();
 }
 
 // Intro slide
@@ -1736,7 +1736,7 @@ gsap.to(
 
 // slide 3 4
 
-gsap.fromTo(
+gsap.from(
   ".slide--34",
   {
     scrollTrigger: {
@@ -1749,53 +1749,42 @@ gsap.fromTo(
     y: "100vh",
     ease: "expo.inOut",
   },
+  2
+);
+
+gsap.to("#slide-34-img2", {
+  scrollTrigger: {
+    trigger: ".s14",
+    start: "50% 70%", // Начало анимации
+    end: "60% 30%",   // Конец анимации
+    scrub: true,   
+    toggleActions: "play none reverse none"
+  },
+  opacity: 0,          // Конечное значение прозрачности
+  ease: "expo.inOut"   // Тип эйзинга
+});
+
+gsap.fromTo(
+  ".slide--34",
   {
     scrollTrigger: {
       trigger: ".s14",
-      start: "top 100%",
-      end: "top 80%",
+      start: "60% 20%",
+      end: "60% 0%",
+      scrub: true,
+      
       toggleActions: "play none reverse none",
     },
     opacity: 1,
     y: "0vh",
     ease: "expo.inOut",
   },
-  2
-);
-
-gsap.fromTo(
-  "#slide-34-img2",
   {
     scrollTrigger: {
       trigger: ".s14",
-      start: "center 70%",
-      end: "center 40%",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 1,
-    ease: "expo.inOut",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      start: "center 70%",
-      end: "center 40%",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 0,
-    ease: "expo.inOut",
-  },
-  2
-);
-gsap.to(
-  ".slide--34",
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      start: "center 20%",
-      end: "center 0%",
+      start: "50% 20%",
+      end: "50% 0%",
       scrub: true,
-
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -1811,8 +1800,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s14",
       scrub: true,
-      start: "center 0%",
-      end: "center 0%",
+      start: "50% 0%",
+      end: "50% 0%",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -1820,38 +1809,6 @@ gsap.to(
   },
   2
 );
-
-// gsap.to(
-//   ".slide--34",
-//   {
-//     scrollTrigger: {
-//       trigger: ".s14",
-//       scrub: true,
-//       start: "bottom bottom",
-//       end: "bottom center",
-//       toggleActions: "play none reverse none",
-//     },
-//     opacity: 0,
-//     ease: "expo.inOut",
-//   },
-//   2
-// );
-
-// gsap.to(
-//   ".slide--34",
-//   {
-//     scrollTrigger: {
-//       trigger: ".s14",
-//       scrub: true,
-//       start: "bottom center",
-//       end: "bottom center",
-//       toggleActions: "play none reverse none",
-//     },
-//     display: "none",
-//     ease: "expo.inOut",
-//   },
-//   2
-// );
 
 // slide 3 5
 
@@ -1941,7 +1898,7 @@ gsap.to(
       toggleActions: "play none reverse none",
     },
     y: "-100vw",
-    width: "0vw",
+    width: "0px",
     opacity: 0,
     ease: "expo.inOut",
   },
@@ -2032,8 +1989,8 @@ gsap.fromTo(
       scrub: true,
     },
     opacity: 0,
-    y: "-100vh",
-    height: 0,
+    x: "100vw",
+    height: "0vh",
     ease: "expo.inOut",
   },
   {
@@ -2044,7 +2001,7 @@ gsap.fromTo(
       scrub: true,
     },
     opacity: 1,
-    y: "0vh",
+    x: "0vw",
     height: "70vh",
     ease: "expo.inOut",
   },
