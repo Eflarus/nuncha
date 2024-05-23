@@ -129,7 +129,8 @@ p {
   display: flex;
   pointer-events: none;
 }
-.header a, .intro__nav-wrapper-popup{
+.header a,
+.intro__nav-wrapper-popup {
   pointer-events: all;
 }
 .back-arrow {
@@ -183,7 +184,7 @@ p {
 
 .slide_text {
   margin: 0;
-  font-size: 20px;
+  font-size: 15x;
   font-weight: normal;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -267,7 +268,7 @@ p {
   overflow: hidden;
 }
 .bordered {
-  outline: 0.5px solid rgb(222, 222, 222);
+  outline: 0.5px solid rgba(222, 222, 222, 0.471);
 }
 
 .slide__content {
@@ -298,10 +299,54 @@ p {
 .slide--30 .intro__content {
   padding-top: 52px;
   padding-bottom: 52px;
-  padding-left: 8px;
+  padding-left: 32px;
+}
+
+.intro__img_bl,
+.intro__img_bl2 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  flex: 50% 0;
+  height: 100%;
+}
+.intro__img_bl {
+  background-image: url("./img/9.jpg");
+}
+.intro__img_bl2 {
+  background-image: url("./img/slide_0.jpg");
+}
+
+@media all and (max-width: 1500px) {
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  .sound_button {
+    height: 70px;
+    width: 70px;
+    border: solid var(--dark) 3px;
+    background-size: 32px;
+  }
 }
 
 @media all and (max-width: 768px) {
+  .intro__img_bl,
+  .intro__img_bl2 {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 70% 0;
+  }
+  .intro__img_bl {
+    background-image: url("./img/n-mob.jpg");
+  }
+  .intro__img_bl2 {
+    background-size: cover;
+  }
   .slide--0 .intro__content,
   .slide--30 .intro__content {
     padding: 0;
@@ -646,12 +691,14 @@ p {
   background-position: 95.6% 92.9%;
   background-size: 50vw auto;
 }
-
+.bout {
+  outline: 0.5px solid #6b6b6b9d;
+}
 .redp {
   position: fixed;
   height: 800px;
   width: 600px;
-  background-color: var(--dark);
+  background-color: #760000b1;
   z-index: -1;
   border-radius: 50%;
   filter: blur(150px);
@@ -664,7 +711,7 @@ p {
   position: fixed;
   height: 800px;
   width: 600px;
-  background-color: var(--dark);
+  background-color: #760000b1;
   z-index: -2;
   border-radius: 50%;
   filter: blur(150px);
@@ -827,6 +874,23 @@ p {
 .slide--312__content img {
   height: 20vh;
 }
+#slide-313,
+#slide-3131 {
+  flex-direction: column;
+  justify-content: center;
+}
+.slide--39__img1,
+.slide--38__img1,
+.slide--36__img1,
+.slide--35__img1,
+.slide--34__img1,
+.slide--33__img1,
+.slide--31__img1,
+.slide--32__img1,
+.slide--36__img1,
+.slide--35__img1 {
+  margin: 0 auto;
+}
 .slide--313__content,
 .slide--3131__content {
   display: flex;
@@ -889,6 +953,7 @@ p {
   gap: 20px;
   height: 80vh;
   width: 80vw;
+  margin: auto;
 }
 .slide--315__content img {
   width: 45vw;
@@ -979,7 +1044,11 @@ p {
     height: 100%;
     object-fit: cover;
   }
-
+  .slide--8__content,
+  .slide--7__content {
+    left: 0;
+    margin: auto;
+  }
   .slide--34__content .rcol p {
     text-align: start;
   }
@@ -1010,15 +1079,12 @@ p {
     gap: 12px;
   }
   .slide--313__content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
+    margin: auto;
   }
   .slide--313__content .s3_text {
     flex: inherit;
-  }
-  .slide--313__img1,
-  .slide--313__img2 {
-    width: 200px !important;
   }
   .slide--314__content .gal-3 {
     flex-direction: column;
@@ -1041,19 +1107,43 @@ p {
   .slide--314__content img {
     width: 40vw;
   }
+  .slide--315__content img {
+    width: 80vw;
+  }
 
   .slide--315__content {
     flex-direction: column;
     justify-content: center;
+    margin: auto;
+  }
+
+  .slide--35__content .s3_text {
+    font-size: 16px;
   }
 
   .slide--36__content .pair-txt {
     flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
   }
 
   .slide--36__content .pair-txt p:first-child {
     text-align: end;
     margin-left: auto;
   }
-
+  .pair-txt p {
+    width: 90vw;
+  }
+  .slide--s3__img {
+    max-height: 26vh;
+    max-width: 90vw;
+  }
+  .slide--317__content {
+    justify-content: center;
+    gap: 20px;
+  }
+  .slide--3131__content,
+  .slide--s3__content {
+    margin: auto;
+  }
 }

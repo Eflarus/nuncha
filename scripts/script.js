@@ -147,7 +147,7 @@ gsap.to(
 );
 
 gsap.to(
-  ".slide--0 .intro__img",
+  ".slide--0 .intro__img_bl",
   {
     scrollTrigger: {
       trigger: ".s1",
@@ -1272,7 +1272,7 @@ gsap.from(
 );
 
 gsap.from(
-  ".slide--30 .intro__img",
+  ".slide--30 .intro__img_bl2",
   {
     scrollTrigger: {
       trigger: ".s10",
@@ -3115,7 +3115,7 @@ gsap.fromTo(
       end: "center 50%",
       toggleActions: "play none reverse none",
     },
-    width: "40vw",
+    width: "80vw",
     x: "0vh",
     opacity: 1,
     ease: "expo.inOut",

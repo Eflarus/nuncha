@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <title>CodePen - Parallax scroll animation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
       <div class="colScroll">
         <section class="s1 sc">1</section>
-        <section class="s2 sr" style="height: 200vh;">2</section>
-        <section class="s3 sc" style="height: 200vh;">3</section>
-        <section class="s4 sr" style="height: 200vh;">4</section>
-        <section class="s5 sc" style="height: 200vh;">5</section>
-        <section class="s6 sr" style="height: 200vh;">6</section>
-        <section class="s7 sc" style="height: 200vh;">7</section>
-        <section class="s8 sr" style="height: 200vh;">8</section>
-        <section class="s9 sc" style="height: 200vh;">9</section>
-        <section class="s10 sr" >10</section>
-        <section class="s11 sc" >11</section>
+        <section class="s2 sr" style="height: 200vh">2</section>
+        <section class="s3 sc" style="height: 200vh">3</section>
+        <section class="s4 sr" style="height: 200vh">4</section>
+        <section class="s5 sc" style="height: 200vh">5</section>
+        <section class="s6 sr" style="height: 200vh">6</section>
+        <section class="s7 sc" style="height: 200vh">7</section>
+        <section class="s8 sr" style="height: 200vh">8</section>
+        <section class="s9 sc" style="height: 200vh">9</section>
+        <section class="s10 sr">10</section>
+        <section class="s11 sc">11</section>
         <section class="s12 sr">12</section>
         <section class="s13 sc">13</section>
         <section class="s14 sr">14</section>
@@ -31,7 +34,7 @@
         <section class="s19 sc">19</section>
         <section class="s20 sr">20</section>
         <section class="s21 sc">21</section>
-        <section class="s22 sr" style="height: 400vh;">22</section>
+        <section class="s22 sr" style="height: 400vh">22</section>
         <section class="s231 sc">231</section>
         <section class="s23 sc">23</section>
         <section class="s24 sr">24</section>
@@ -70,16 +73,30 @@
             <section class="slide--0" id="slide-0">
               <div class="intro__content">
                 <div class="intro__nav-wrapper smh">
-                  <p class="slide_text" onclick="scrollToElementById('slide-0')">фоторепортаж<br />зарождение</p>
+                  <p
+                    class="slide_text"
+                    onclick="scrollToElementById('slide-0')"
+                  >
+                    фоторепортаж<br />зарождение
+                  </p>
                   <p class="slide_text">фотопроект<br />алла сигалова</p>
-                  <p class="slide_text"onclick="scrollToElementById('slide-30')">фоторепортаж<br />вечная жизнь</p>
+                  <p
+                    class="slide_text"
+                    onclick="scrollToElementById('slide-30')"
+                  >
+                    фоторепортаж<br />вечная жизнь
+                  </p>
                 </div>
                 <div class="intro_group">
                   <h1 class="intro__title">Нунча</h1>
                   <h2 class="intro__subtitle">зарождение</h2>
                 </div>
                 <div class="intro_group">
-                  <div class="intro__btn-wrapper" id="volume" onclick="toggleAudio()">
+                  <div
+                    class="intro__btn-wrapper"
+                    id="volume"
+                    onclick="toggleAudio()"
+                  >
                     <div class="sound_button intro__btn"></div>
                     <p class="slide_text">включить аудио<br />сопровождение</p>
                   </div>
@@ -87,8 +104,7 @@
                   <h2 class="intro__subtitle smh">фоторепортаж</h2>
                 </div>
               </div>
-              <img class="intro__img smh" src="./img/9.jpg" />
-              <img class="intro__img mdh" src="./img/n-mob.jpg" />
+              <div class="intro__img_bl"></div>
             </section>
 
             <section class="slide--1" id="slide-1">
@@ -122,8 +138,8 @@
             <section class="slide--3" id="slide-3">
               <div class="slide--3__content slide__content">
                 <div class="img-pair slide__bg__img">
-                  <img class="slide--3__img1" src="./img/slide3-1.jpg" />
-                  <img class="slide--3__img2" src="./img/slide3-2.jpg" />
+                  <img class="slide--3__img1 bout" src="./img/slide3-1.jpg" />
+                  <img class="slide--3__img2 bout" src="./img/slide3-2.jpg" />
                 </div>
                 <div class="bordered slide--3__img3 imgl"></div>
                 <div class="bordered slide--3__img4 imgr"></div>
@@ -134,7 +150,7 @@
             <section class="slide--4" id="slide-4">
               <div class="slide--4__content slide__content">
                 <img
-                  class="slide--4__img1 slide__bg__img"
+                  class="slide--4__img1 slide__bg__img bout"
                   src="./img/slide4-1.jpg"
                 />
                 <div class="bordered slide--4__img2 imgl"></div>
@@ -168,7 +184,7 @@
             <section class="slide--7" id="slide-7">
               <div class="slide--7__content slide__content">
                 <img
-                  class="slide--7__img1 slide__bg__img"
+                  class="slide--7__img1 slide__bg__img bout"
                   src="./img/slide7-1.jpg"
                 />
                 <div class="nobordered slide--7__img2 imgl"></div>
@@ -179,7 +195,7 @@
             <section class="slide--8" id="slide-8">
               <div class="slide--8__content slide__content">
                 <img
-                  class="slide--8__img1 slide__bg__img"
+                  class="slide--8__img1 slide__bg__img bout"
                   src="./img/slide8-1.jpg"
                 />
                 <div class="slide--8__img2 imgl bordered"></div>
@@ -190,9 +206,19 @@
             <section class="slide--30" id="slide-30">
               <div class="intro__content">
                 <div class="intro__nav-wrapper">
-                  <p class="slide_text" onclick="scrollToElementById('slide-0')">фоторепортаж<br />зарождение</p>
+                  <p
+                    class="slide_text"
+                    onclick="scrollToElementById('slide-0')"
+                  >
+                    фоторепортаж<br />зарождение
+                  </p>
                   <p class="slide_text">фотопроект</p>
-                  <p class="slide_text" onclick="scrollToElementById('slide-30')">фоторепортаж<br />вечная жизнь</p>
+                  <p
+                    class="slide_text"
+                    onclick="scrollToElementById('slide-30')"
+                  >
+                    фоторепортаж<br />вечная жизнь
+                  </p>
                 </div>
                 <div class="intro_group">
                   <h1 class="intro__title">Нунча</h1>
@@ -207,7 +233,7 @@
                   <h2 class="intro__subtitle smh">фоторепортаж</h2>
                 </div>
               </div>
-              <img class="intro__img" src="./img/slide_0.jpg" />
+              <div class="intro__img_bl2"></div>
             </section>
 
             <section class="slide--31 s3" id="slide-31">
@@ -217,9 +243,11 @@
                   src="./img/slide_31.jpg"
                 />
                 <p class="s3_text">
-                  До лета прошлого года другою гордостью квартала была Нунча,<br />торговка
-                  овощами, — самый веселый человек в мире и первая
-                  <br />красавица нашего угла
+                  До лета прошлого года другою<br />
+                  гордостью квартала была Нунча,<br />
+                  торговка овощами, — самый<br />
+                  веселый человек в мире и первая<br />
+                  красавица нашего угла
                 </p>
               </div>
             </section>
@@ -231,11 +259,13 @@
                   src="./img/slide_32.jpg"
                 />
                 <p class="s3_text">
-                  Лет десять сияла Нунча звездою, всеми признанная первая<br />
-                  красавица, лучшая танцорка квартала, и, будь она девушкой,
-                  —<br />
-                  ее, конечно, выбрали бы королевой рынка, чем она и<br />
-                  была в глазах всех.
+                  Лет десять сияла Нунча<br />
+                  звездою, всеми признанная <br />
+                  первая красавица, лучшая <br />
+                  танцорка квартала, и, будь<br />
+                  она девушкой, — ее, конечно,<br />
+                  выбрали бы королевой рынка, <br />
+                  чем она и была в глазах всех.
                 </p>
               </div>
             </section>
@@ -254,13 +284,15 @@
                     становится совсем точно мать!
                   </h3>
                   <p>
-                    Это была правда, как майский день: дочь Нунчи незаметно для
-                    людей разгорелась звездою, такою же яркой, как мать.
+                    Это была правда, как майский день:<br />
+                    дочь Нунчи незаметно для людей разгорелась <br />
+                    звездою, такою же яркой, как мать.
                   </p>
                   <p>
-                    Ей было только четырнадцать лет, но — очень рослая,
-                    пышноволосая, с гордыми глазами — она казалась значительно
-                    старше и вполне готовой быть женщиной.
+                    Ей было только четырнадцать лет, но — очень<br />
+                    рослая, пышноволосая, с гордыми глазами —<br />
+                    она казалась значительно старше и вполне<br />
+                    готовой быть женщиной.
                   </p>
                 </div>
               </div>
@@ -270,7 +302,8 @@
               <div class="slide--34__content slide--s3__content slide__content">
                 <div class="lcol">
                   <img
-                    class="slide--34__img2 slide--s3__img imgl" id="slide-34-img2"
+                    class="slide--34__img2 slide--s3__img imgl"
+                    id="slide-34-img2"
                     src="./img/slide_34-1.jpg"
                   />
                 </div>
@@ -290,8 +323,9 @@
                   src="./img/slide_35-1.jpg"
                 />
                 <p class="s3_text">
-                  Вот наша жизнь! Не успеешь допить свой стакан до половины, а к
-                  нему уже потянулась новая рука…
+                  Вот наша жизнь! Не успеешь допить<br />
+                   свой стакан до половины, а к нему<br />
+                  уже потянулась новая рука…
                 </p>
               </div>
             </section>
@@ -304,12 +338,15 @@
                 />
                 <div class="pair-txt">
                   <p class="s3_text">
-                    Cначала не заметно было и тени соперничества между матерью и
-                    Ниной, — дочь вела себя скромно, бережно
+                    Cначала не заметно было и<br />
+                    тени соперничества между<br />
+                    матерью и Ниной, — дочь вела <br />
+                    себя скромно, бережно
                   </p>
                   <p class="s3_text">
-                    А глаза матери горели всё жадней, и всё призывней звучал её
-                    голос
+                    А глаза матери горели всё<br />
+                    жадней, и всё призывней<br />
+                    звучал её голос
                   </p>
                 </div>
               </div>
@@ -323,13 +360,14 @@
                 />
                 <div class="col-txt">
                   <p class="s3_text txt-1">
-                    Умолкает птица.<br> 
-                    Наступает вечер.<br> 
-                    Раскрывает веер<br>
+                    Умолкает птица.<br />
+                    Наступает вечер.<br />
+                    Раскрывает веер<br />
                     испанская танцовщица.
                   </p>
                   <p class="s3_text txt-2">
-                    Звучат удары луны из бубна,<br> и глухо, дробно вторят гитары
+                    Звучат удары луны из бубна,<br />
+                    и глухо, дробно вторят гитары
                   </p>
                 </div>
                 <img
@@ -342,8 +380,9 @@
             <section class="slide--38 s3" id="slide-38">
               <div class="slide--38__content slide--s3__content slide__content">
                 <p class="s3_text">
-                  В день святого Якова, на празднике нашего <br />
-                  квартала, когда все люди веселились от души, <br />
+                  В день святого Якова, на<br />
+                  празднике нашего квартала, когда <br />
+                  все люди веселились от души, <br />
                   а Нунча великолепно танцевала…
                 </p>
                 <img
@@ -361,13 +400,13 @@
                 />
                 <div class="pair-txt">
                   <h3>
-                    …дочь заметила ей<br />
-                    при всех:
+                    …дочь заметила <br />
+                    ей при всех:
                   </h3>
                   <p class="s3_text">
-                    Не слишком ли много танцуешь ты?<br />
-                    Пожалуй, это не по годам тебе, пора <br />
-                    щадить сердце…
+                    Не слишком ли много танцуешь <br />
+                    ты? Пожалуй, это не по годам<br />
+                    тебе, пора щадить сердце…
                   </p>
                 </div>
               </div>
@@ -429,7 +468,11 @@
                   src="./img/nw.svg"
                 />
               </div>
-              <div class="sound_button" id="sound_button_sm" onclick="toggleWPlayAudio()"></div>
+              <div
+                class="sound_button"
+                id="sound_button_sm"
+                onclick="toggleWPlayAudio()"
+              ></div>
             </section>
 
             <section class="slide--3131 s3" id="slide-3131">
@@ -451,8 +494,9 @@
                   Уже с первых минут стало ясно, <br />
                   что дочь уступит матери в <br />
                   легкости и силе, – Нунча <br />
-                  бежала так свободно и красиво, <br />точно сама земля несла
-                  ее, как <br />мать ребенка
+                  бежала так свободно и красиво, <br />
+                  точно сама земля несла ее, как <br />
+                  мать ребенка
                 </p>
                 <img
                   class="slide--313__img2 slide--s3__img imgr"
