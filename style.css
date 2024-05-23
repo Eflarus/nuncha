@@ -1065,6 +1065,7 @@ p {
 
   .slide--37__content img {
     max-height: 40vh;
+    margin: 0 auto;
   }
   .slide--37__content p {
     max-width: 56vw;
