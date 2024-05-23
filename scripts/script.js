@@ -61,7 +61,7 @@ const toggleWPlayAudio = () => {
     SOUNDS.DANCE.play();
     SOUNDS.DANCE.volume = 0.99;
   }
-}
+};
 let config = { strength: 0 };
 
 gsap.to(".slide--312", {
@@ -71,7 +71,6 @@ gsap.to(".slide--312", {
     scrub: true,
     start: "top center",
     end: "center top",
-    markers: true,
     onEnter: () => {
       console.log("onEnter");
       if (!SOUNDS.DANCE.muted) {
@@ -116,7 +115,7 @@ function scrollToElementById(elementId) {
   if (elementId === "slide-0") {
     to = 0;
   } else if (elementId === "slide-30") {
-    to = vhToPx(9);
+    to = vhToPx(17);
   }
   gsap.to(
     window,
@@ -127,6 +126,7 @@ function scrollToElementById(elementId) {
     },
     2
   );
+  toggleNav()
 }
 
 // Intro slide
@@ -212,13 +212,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s2",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -228,12 +228,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s2",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -244,8 +244,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s2",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -261,8 +261,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s2",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -277,12 +277,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s2",
       scrub: true,
-      start: "bottom center+=200",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -310,13 +310,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s3",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -326,12 +326,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s3",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -342,8 +342,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s3",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -358,8 +358,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s3",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=100",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -374,12 +374,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s3",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -407,13 +407,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s4",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -423,12 +423,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s4",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -438,8 +438,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s4",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -454,8 +454,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s4",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=100",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -470,12 +470,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s4",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -503,12 +503,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s5",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -518,13 +518,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s5",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -535,8 +535,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s5",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -552,8 +552,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s5",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -568,12 +568,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s5",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -601,12 +601,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s6",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -616,13 +616,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s6",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -632,8 +632,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s6",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -649,8 +649,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s6",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -665,12 +665,13 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s6",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    y: "100vh",
+    ease: "expo.out",
   },
   2
 );
@@ -698,12 +699,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s7",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -713,13 +714,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s7",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -730,8 +731,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s7",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -747,8 +748,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s7",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -763,12 +764,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s7",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -796,12 +797,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s8",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -811,13 +812,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s8",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -828,8 +829,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s8",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -845,8 +846,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s8",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -861,12 +862,12 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s8",
       scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -894,12 +895,12 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s9",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "100vw",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -909,13 +910,13 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s9",
-      start: "top center",
-      end: "center center",
+      start: "top 50%",
+      end: "50% 60%",
       scrub: true,
     },
     x: "-100vw",
     y: "-100vh",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -926,8 +927,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s9",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -943,8 +944,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s9",
       scrub: true,
-      start: "top top+=100",
-      end: "top top-=150",
+      start: "40% 60%",
+      end: "60% 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -959,14 +960,14 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s9",
       scrub: true,
-      start: "bottom bottom",
-      end: "bottom center",
+      start: "80% 70%",
+      end: "bottom 20%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
     y: "-100vh",
     width: 0,
-    ease: "expo.inOut",
+    ease: "expo.out",
   },
   2
 );
@@ -988,17 +989,29 @@ gsap.to(
 );
 
 // reds
-gsap.to(
+gsap.fromTo(
   " .redp",
   {
     scrollTrigger: {
-      trigger: ".s4",
-      start: "top bottom",
-      end: "top center",
+      trigger: ".s1",
+      start: "0% 100%",
+      end: "0% 80%",
       scrub: true,
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s4",
+      start: "0% 100%",
+      end: "0% 80%",
+      scrub: true,
+      toggleActions: "play none reverse none",
     },
     opacity: 1,
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -1011,14 +1024,15 @@ gsap.to(
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+      toggleActions: "play none reverse none",
     },
     transform: "rotate(90deg)",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
 
-gsap.to(
+gsap.fromTo(
   " .redp",
   {
     scrollTrigger: {
@@ -1026,30 +1040,67 @@ gsap.to(
       start: "top bottom",
       end: "bottom top",
       scrub: true,
+      toggleActions: "play none reverse none",
+    },
+    transform: "scale(1)",
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s5",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+      toggleActions: "play none reverse none",
     },
     transform: "scale(1.5)",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
 
-gsap.to(
+gsap.fromTo(
   " .redp",
   {
     scrollTrigger: {
-      trigger: ".s5",
-      start: "top center",
-      end: "center center",
+      trigger: ".s4",
+      start: "80% 70%",
+      end: "100% 40%",
+      scrub: true,
+      toggleActions: "play none reverse none",
+    },
+    opacity: 1,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s4",
+      start: "80% 70%",
+      end: "100% 40%",
+      scrub: true,
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
+    ease: "expo.inOut",
+  },
+  2
+);
+
+gsap.fromTo(
+  " .redp",
+  {
+    scrollTrigger: {
+      trigger: ".s7",
+      start: "top 100%",
+      end: "top 50%",
+      toggleActions: "play none reverse none",
       scrub: true,
     },
     opacity: 0,
-    ease: "power2",
+    transform: "scale(1)",
+    y: "0%",
+    ease: "expo.inOut",
   },
-  2
-);
-
-gsap.to(
-  " .redp",
   {
     scrollTrigger: {
       trigger: ".s7",
@@ -1061,7 +1112,7 @@ gsap.to(
     opacity: 1,
     transform: "scale(0.5)",
     y: "-50%",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -1077,7 +1128,7 @@ gsap.to(
       scrub: true,
     },
     y: "50%",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -1092,9 +1143,9 @@ gsap.to(
       toggleActions: "play none reverse none",
       scrub: true,
     },
-    y: 0,
+    y: "0%",
     transform: "scale(1.2)",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -1112,7 +1163,7 @@ gsap.to(
     x: "-50%",
     y: "30%",
     transform: "scale(0.8)",
-    ease: "power2",
+    ease: "expo.inOut",
   },
   2
 );
@@ -1275,6 +1326,7 @@ gsap.to(
       toggleActions: "play none reverse none",
     },
     opacity: 0,
+    width: "0vw",
     y: "-100vh",
     ease: "expo.inOut",
   },
@@ -1413,8 +1465,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s12",
-      start: "top bottom",
-      end: "top center",
+      start: "center 100%",
+      end: "center 70%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -1425,8 +1477,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s12",
-      start: "top bottom",
-      end: "top center",
+      start: "center 100%",
+      end: "center 70%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -1488,8 +1540,8 @@ gsap.to(
   {
     scrollTrigger: {
       trigger: ".s12",
-      start: "bottom bottom",
-      end: "bottom center",
+      start: "center 50%",
+      end: "center 20%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -1505,8 +1557,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s12",
       scrub: true,
-      start: "bottom center",
-      end: "bottom center",
+      start: "top -20%",
+      end: "top -20%",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -1517,17 +1569,55 @@ gsap.to(
 
 // slide 3 3
 
-gsap.from(
-  ".slide--33__img2",
+gsap.fromTo(
+  ".slide--33 .lcol",
   {
     scrollTrigger: {
       trigger: ".s13",
       scrub: true,
-      start: "center center+=100",
-      end: "center center",
+      start: "top 80%",
+      end: "top 70%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s13",
+      scrub: true,
+      start: "top 80%",
+      end: "top 70%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 1,
+    ease: "expo.inOut",
+  },
+  2
+);
+
+gsap.fromTo(
+  ".slide--33 .slide--33__img2",
+  {
+    scrollTrigger: {
+      trigger: ".s13",
+      scrub: true,
+      start: "top 70%",
+      end: "top 40%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s13",
+      scrub: true,
+      start: "top 70%",
+      end: "top 40%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 1,
     ease: "expo.inOut",
   },
   2
@@ -1539,8 +1629,8 @@ gsap.from(
     scrollTrigger: {
       trigger: ".s13",
       scrub: true,
-      start: "top center",
-      end: "top center-=200",
+      start: "top 70%",
+      end: "top 40%",
       toggleActions: "play none reverse none",
     },
     x: "100vw",
@@ -1555,59 +1645,75 @@ gsap.from(
     scrollTrigger: {
       trigger: ".s13",
       scrub: true,
-      start: "center center+=200",
-      end: "center center",
+      start: "top 50%",
+      end: "top 20%",
       toggleActions: "play none reverse none",
     },
     height: 0,
+    opacity: 0,
     ease: "expo.inOut",
   },
   2
 );
 
-gsap.from(
-  ".slide--33__content .rcol p",
+// gsap.to(
+//   ".slide--33 .lcol",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s13",
+//       start: "bottom center+=100",
+//       end: "bottom center",
+//       toggleActions: "play none reverse none",
+//     },
+//     y: "-100vh",
+//     ease: "expo.inOut",
+//     duration: 1,
+//   },
+//   2
+// );
+// gsap.to(
+//   ".slide--33 .rcol",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s13",
+//       start: "bottom 60%",
+//       end: "bottom 40%",
+//       toggleActions: "play none reverse none",
+//     },
+//     opacity: 0,
+//     ease: "expo.inOut",
+//   },
+//   2
+// );
+
+// gsap.to(
+//   ".slide--33",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s13",
+//       start: "center 0%",
+//       end: "center 0%",
+//       toggleActions: "play none reverse none",
+//     },
+//     display: "none",
+//     ease: "expo.inOut",
+//   },
+//   2
+// );
+
+gsap.to(
+  ".slide--33 .slide__content",
   {
     scrollTrigger: {
       trigger: ".s13",
-      start: "center center+=100",
-      end: "center center",
+      start: "top 20%",
+      end: "top 0%",
+      scrub: true,
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    ease: "expo.inOut",
-    duration: 1,
-  },
-  2
-);
-
-gsap.to(
-  ".slide--33 .lcol",
-  {
-    scrollTrigger: {
-      trigger: ".s13",
-      start: "bottom center+=100",
-      end: "bottom center",
-      toggleActions: "play none reverse none",
-    },
     y: "-100vh",
     ease: "expo.inOut",
-    duration: 1,
-  },
-  2
-);
-gsap.to(
-  ".slide--33 .rcol",
-  {
-    scrollTrigger: {
-      trigger: ".s13",
-      start: "bottom center+=100",
-      end: "bottom center",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 0,
-    ease: "expo.inOut",
-    duration: 1,
   },
   2
 );
@@ -1617,8 +1723,9 @@ gsap.to(
   {
     scrollTrigger: {
       trigger: ".s13",
-      start: "bottom center",
-      end: "bottom center",
+      scrub: true,
+      start: "top 0%",
+      end: "top 0%",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -1630,88 +1737,69 @@ gsap.to(
 // slide 3 4
 
 gsap.fromTo(
-  ".slide--34__img2",
+  ".slide--34",
   {
     scrollTrigger: {
       trigger: ".s14",
-      start: "center bottom",
-      end: "center center",
+      start: "top 100%",
+      end: "top 80%",
       toggleActions: "play none reverse none",
     },
+    opacity: 0,
+    y: "100vh",
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s14",
+      start: "top 100%",
+      end: "top 80%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 1,
+    y: "0vh",
+    ease: "expo.inOut",
+  },
+  2
+);
+
+gsap.fromTo(
+  "#slide-34-img2",
+  {
+    scrollTrigger: {
+      trigger: ".s14",
+      start: "center 70%",
+      end: "center 40%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 1,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s14",
+      start: "center 70%",
+      end: "center 40%",
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
+    ease: "expo.inOut",
+  },
+  2
+);
+gsap.to(
+  ".slide--34",
+  {
+    scrollTrigger: {
+      trigger: ".s14",
+      start: "center 20%",
+      end: "center 0%",
+      scrub: true,
+
+      toggleActions: "play none reverse none",
+    },
+    opacity: 0,
     y: "-100vh",
-    ease: "expo.inOut",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      start: "center bottom",
-      end: "center center",
-      toggleActions: "play none reverse none",
-    },
-    y: 0,
-    ease: "expo.inOut",
-  },
-  0
-);
-
-gsap.to(
-  ".slide--34__img2",
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      start: "center center",
-      end: "center center-=300",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 0,
-    ease: "power2",
-  },
-  0
-);
-
-gsap.from(
-  ".slide--34__content .rcol p",
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      scrub: true,
-      start: "top bottom",
-      end: "top top",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 0,
-    x: "100vw",
-    ease: "expo.inOut",
-  },
-  2
-);
-
-gsap.to(
-  ".slide--34 .lcol",
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
-      toggleActions: "play none reverse none",
-    },
-    y: "-100vw",
-    ease: "expo.inOut",
-  },
-  2
-);
-gsap.to(
-  ".slide--34 .rcol",
-  {
-    scrollTrigger: {
-      trigger: ".s14",
-      scrub: true,
-      start: "bottom center+=100",
-      end: "bottom center",
-      toggleActions: "play none reverse none",
-    },
-    opacity: 0,
     ease: "expo.inOut",
   },
   2
@@ -1723,8 +1811,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s14",
       scrub: true,
-      start: "bottom center",
-      end: "bottom center",
+      start: "center 0%",
+      end: "center 0%",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -1732,6 +1820,38 @@ gsap.to(
   },
   2
 );
+
+// gsap.to(
+//   ".slide--34",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s14",
+//       scrub: true,
+//       start: "bottom bottom",
+//       end: "bottom center",
+//       toggleActions: "play none reverse none",
+//     },
+//     opacity: 0,
+//     ease: "expo.inOut",
+//   },
+//   2
+// );
+
+// gsap.to(
+//   ".slide--34",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s14",
+//       scrub: true,
+//       start: "bottom center",
+//       end: "bottom center",
+//       toggleActions: "play none reverse none",
+//     },
+//     display: "none",
+//     ease: "expo.inOut",
+//   },
+//   2
+// );
 
 // slide 3 5
 
@@ -1741,8 +1861,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "center bottom",
-      end: "center center",
+      start: "center 100%",
+      end: "center 70%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -1753,8 +1873,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "center bottom",
-      end: "center center",
+      start: "center 100%",
+      end: "center 70%",
       toggleActions: "play none reverse none",
     },
     y: "-20vh",
@@ -1770,8 +1890,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "center bottom",
-      end: "center center",
+      start: "center 100%",
+      end: "center 70%",
       toggleActions: "play none reverse none",
     },
     y: "-20vh",
@@ -1782,8 +1902,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "center center+=200",
-      end: "center center",
+      start: "center 80%",
+      end: "center 50%",
       toggleActions: "play none reverse none",
     },
     y: "0vh",
@@ -1799,8 +1919,8 @@ gsap.from(
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "center center+=200",
-      end: "center center",
+      start: "center 80%",
+      end: "center 50%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -1811,16 +1931,18 @@ gsap.from(
 );
 
 gsap.to(
-  ".slide--35 .slide__content",
+  ".slide--35",
   {
     scrollTrigger: {
       trigger: ".s15",
       scrub: true,
-      start: "bottom bottom",
-      end: "bottom center",
+      start: "bottom 100%",
+      end: "bottom 50%",
       toggleActions: "play none reverse none",
     },
     y: "-100vw",
+    width: "0vw",
+    opacity: 0,
     ease: "expo.inOut",
   },
   2
@@ -1849,8 +1971,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s16",
-      start: "top center",
-      end: "top center-=200",
+      start: "top 50%",
+      end: "top 20%",
       toggleActions: "play none reverse none",
       scrub: true,
     },
@@ -1861,8 +1983,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s16",
-      start: "top center",
-      end: "top center-=200",
+      start: "top 50%",
+      end: "top 20%",
       toggleActions: "play none reverse none",
       scrub: true,
     },
@@ -1874,7 +1996,7 @@ gsap.fromTo(
 );
 
 gsap.fromTo(
-  ".slide--36 .s3_text",
+  ".slide--36 .pair-txt",
   {
     scrollTrigger: {
       trigger: ".s16",
@@ -1883,7 +2005,7 @@ gsap.fromTo(
       toggleActions: "play none reverse none",
       scrub: true,
     },
-    y: "0",
+    transform: "scale(1)",
     ease: "expo.inOut",
   },
   {
@@ -1895,23 +2017,35 @@ gsap.fromTo(
       scrub: true,
     },
     transform: "scale(0.8)",
-    y: 0,
     ease: "expo.inOut",
   },
   2
 );
 
-gsap.from(
+gsap.fromTo(
   ".slide--36 .slide--36__img1",
   {
     scrollTrigger: {
       trigger: ".s16",
-      start: "center center+=200",
-      end: "center center",
+      start: "center 80%",
+      end: "center 50%",
       scrub: true,
     },
     opacity: 0,
     y: "-100vh",
+    height: 0,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s16",
+      start: "center 80%",
+      end: "center 50%",
+      scrub: true,
+    },
+    opacity: 1,
+    y: "0vh",
+    height: "70vh",
     ease: "expo.inOut",
   },
   2
@@ -2383,40 +2517,23 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s21",
-      start: "center bottom+=50",
-      end: "center bottom",
+      start: "20% 100%",
+      end: "50% 60%",
       scrub: true,
     },
     opacity: 0,
-    y: "100vh",
     ease: "expo.inOut",
   },
   2
 );
-
-gsap.to(
-  ".slide--311 .s3_h3",
-  {
-    scrollTrigger: {
-      trigger: ".s21",
-      start: "center bottom+=50",
-      end: "center bottom",
-      scrub: true,
-    },
-    width: "90vw",
-    ease: "expo.inOut",
-  },
-  2
-);
-
 gsap.to(
   ".slide--311",
   {
     scrollTrigger: {
       trigger: ".s21",
       scrub: true,
-      start: "bottom bottom",
-      end: "bottom center",
+      start: "center bottom",
+      end: "center center",
       toggleActions: "play none reverse none",
     },
     y: "-100vh",
@@ -2430,8 +2547,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s21",
       scrub: true,
-      start: "bottom center",
-      end: "bottom center",
+      start: "center center",
+      end: "center center",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -2462,12 +2579,12 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "top bottom",
-      end: "center bottom",
+      start: "0% 100%",
+      end: "10% 80%",
       scrub: true,
     },
     opacity: 0,
-    transform: "scale(1) ",
+    transform: "scale(1)",
     y: "100%",
     x: "100vw",
     ease: "expo.inOut",
@@ -2475,8 +2592,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom",
-      end: "center bottom-=100",
+      start: "0% 100%",
+      end: "10% 80%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2494,8 +2612,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "top bottom",
-      end: "center bottom",
+      start: "0% 100%",
+      end: "10% 80%",
       scrub: true,
     },
     opacity: 0,
@@ -2507,8 +2625,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom",
-      end: "center bottom-=100",
+      start: "0% 100%",
+      end: "10% 80%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2527,8 +2645,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom",
-      end: "center bottom-=100",
+      start: "0% 100%",
+      end: "10% 80%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2540,8 +2658,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=101",
-      end: "center bottom-=200",
+      start: "10% 80%",
+      end: "20% 60%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2559,8 +2677,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=101",
-      end: "center bottom-=200",
+      start: "10% 80%",
+      end: "20% 60%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2572,8 +2690,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=201",
-      end: "center bottom-=300",
+      start: "20% 60%",
+      end: "30% 40%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2592,8 +2710,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=201",
-      end: "center bottom-=300",
+      start: "20% 61%",
+      end: "30% 41%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2606,8 +2724,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=301",
-      end: "center bottom-=400",
+      start: "30% 40%",
+      end: "40% 20%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2626,8 +2744,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=301",
-      end: "center bottom-=400",
+      start: "30% 40%",
+      end: "40% 20%",
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2640,8 +2758,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=401",
-      end: "center bottom-=500",
+      start: "40% 25%",
+      end: "50% 10%",
       toggleActions: "play none reverse none",
       scrub: true,
     },
@@ -2660,8 +2778,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=401",
-      end: "center bottom-=500",
+      start: "40% 25%",
+      end: "50% 10%",
       toggleActions: "play none reverse none",
       scrub: true,
     },
@@ -2674,13 +2792,13 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=501",
-      end: "center bottom-=600",
+      start: "50% 10%",
+      end: "70% 0%",
       toggleActions: "play none reverse none",
       scrub: true,
     },
     x: "140vw",
-    y: "-20vh",
+    y: "-1200%",
     transform: "rotateY(180deg) scale(64,200)",
     ease: "expo.inOut",
     duration: 2,
@@ -2694,8 +2812,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom",
-      end: "center bottom-=100",
+      start: "0% 100%",
+      end: "10% 80%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2708,8 +2827,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=101",
-      end: "center bottom-=200",
+      start: "10% 80%",
+      end: "20% 60%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2727,8 +2847,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=101",
-      end: "center bottom-=200",
+      start: "10% 80%",
+      end: "20% 60%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2740,8 +2861,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=201",
-      end: "center bottom-=300",
+      start: "20% 60%",
+      end: "30% 40%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2759,8 +2881,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=201",
-      end: "center bottom-=300",
+      start: "20% 60%",
+      end: "30% 40%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2772,8 +2895,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=301",
-      end: "center bottom-=400",
+      start: "30% 40%",
+      end: "40% 20%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2792,8 +2916,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=301",
-      end: "center bottom-=400",
+      start: "30% 40%",
+      end: "40% 20%",
+
       scrub: true,
       toggleActions: "play none reverse none",
     },
@@ -2806,8 +2931,9 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s22",
-      start: "center bottom-=401",
-      end: "center bottom-=500",
+      start: "40% 20%",
+      end: "50% 0%",
+
       toggleActions: "play none reverse none",
       scrub: true,
     },
@@ -2869,8 +2995,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s231",
-      start: "center bottom",
-      end: "center bottom-=200",
+      start: "center 100%",
+      end: "center 60%",
       scrub: true,
     },
     opacity: 0,
@@ -2880,8 +3006,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s231",
-      start: "center bottom",
-      end: "center bottom-=200",
+      start: "center 100%",
+      end: "center 60%",
       scrub: true,
     },
     opacity: 1,
@@ -2943,8 +3069,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s23",
       scrub: true,
-      start: "top bottom",
-      end: "top bottom-=300",
+      start: "top 100%",
+      end: "top 130%",
       toggleActions: "play none reverse none",
     },
     x: "100vw",
@@ -2955,8 +3081,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s23",
       scrub: true,
-      start: "top bottom+=300",
-      end: "top bottom",
+      start: "top 100%",
+      end: "top 80%",
       toggleActions: "play none reverse none",
     },
     x: "0vw",
@@ -2972,8 +3098,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s23",
       scrub: true,
-      start: "center bottom+=250",
-      end: "center center",
+      start: "center 80%",
+      end: "center 50%",
       toggleActions: "play none reverse none",
     },
     width: "0vw",
@@ -2985,8 +3111,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s23",
       scrub: true,
-      start: "center bottom+=250",
-      end: "center center",
+      start: "center 80%",
+      end: "center 50%",
       toggleActions: "play none reverse none",
     },
     width: "40vw",
@@ -3036,8 +3162,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s24",
       scrub: true,
-      start: "center bottom",
-      end: "center bottom-=200",
+      start: "center 100%",
+      end: "center 60%",
       toggleActions: "play none reverse none",
     },
     x: "-200vw",
@@ -3047,8 +3173,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s24",
       scrub: true,
-      start: "center bottom",
-      end: "center bottom-=200",
+      start: "center 100%",
+      end: "center 60%",
       toggleActions: "play none reverse none",
     },
     x: "0vw",
@@ -3064,8 +3190,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s24",
       scrub: true,
-      start: "center bottom",
-      end: "center bottom-=200",
+      start: "center 60%",
+      end: "center 30%",
       toggleActions: "play none reverse none",
     },
     x: "0vw",
@@ -3076,8 +3202,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s24",
       scrub: true,
-      start: "center center+=200",
-      end: "center center",
+      start: "center 60%",
+      end: "center 30%",
       toggleActions: "play none reverse none",
     },
     transform: "scale(1.2)",
@@ -3093,8 +3219,8 @@ gsap.from(
     scrollTrigger: {
       trigger: ".s24",
       scrub: true,
-      start: "center center+=200",
-      end: "center center",
+      start: "center 60%",
+      end: "center 30%",
       toggleActions: "play none reverse none",
     },
     y: "-50vh",
@@ -3142,8 +3268,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s25",
-      start: "top center+=300",
-      end: "top top",
+      start: "top 80%",
+      end: "top 40%",
       scrub: true,
     },
     opacity: 0,
@@ -3154,8 +3280,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s25",
-      start: "center bottom+=300",
-      end: "center bottom",
+      start: "top 80%",
+      end: "top 40%",
       scrub: true,
     },
     opacity: 1,
@@ -3171,8 +3297,8 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s25",
-      start: "center center+=300",
-      end: "center center",
+      start: "center 60%",
+      end: "center 30%",
       scrub: true,
     },
     width: "0vw",
@@ -3189,8 +3315,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s25",
       scrub: true,
-      start: "bottom bottom",
-      end: "bottom center",
+      start: "center 20%",
+      end: "center 0%",
       toggleActions: "play none reverse none",
     },
     y: "-100vh",
@@ -3216,32 +3342,30 @@ gsap.to(
 
 // slide 3 16
 
-gsap.from(
+gsap.fromTo(
   ".slide--316 .s3_h3",
   {
     scrollTrigger: {
       trigger: ".s26",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 100%",
+      end: "center 80%",
       scrub: true,
     },
     opacity: 0,
     y: "100vh",
+    width: "0vw",
     ease: "expo.inOut",
   },
-  2
-);
-
-gsap.to(
-  ".slide--316 .s3_h3",
   {
     scrollTrigger: {
       trigger: ".s26",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 100%",
+      end: "center 80%",
       scrub: true,
     },
     width: "90vw",
+    opacity: 1,
+    y: "0vh",
     ease: "expo.inOut",
   },
   2
@@ -3285,19 +3409,20 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s27",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 100%",
+      end: "center 80%",
       scrub: true,
     },
     opacity: 0,
     y: "100vh",
+    transform: "scale(1.3)",
     ease: "expo.inOut",
   },
   {
     scrollTrigger: {
       trigger: ".s27",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 100%",
+      end: "center 80%",
       scrub: true,
     },
     opacity: 1,
@@ -3313,11 +3438,10 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s27",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 80%",
+      end: "center 40%",
       scrub: true,
     },
-    opacity: 1,
     y: "0vh",
     transform: "scale(1.3)",
     ease: "expo.inOut",
@@ -3325,8 +3449,8 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s27",
-      start: "center center",
-      end: "center center-=100",
+      start: "center 80%",
+      end: "center 40%",
       scrub: true,
     },
     transform: "scale(1)",
@@ -3341,8 +3465,8 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s27",
-      start: "center center",
-      end: "center center-=200",
+      start: "center 80%",
+      end: "center 40%",
       scrub: true,
     },
     opacity: 0,
@@ -3358,8 +3482,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s27",
       scrub: true,
-      start: "bottom center+=300",
-      end: "bottom center",
+      start: "center 20%",
+      end: "center 0%",
       toggleActions: "play none reverse none",
     },
     y: "-100vh",
@@ -3373,8 +3497,8 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s27",
       scrub: true,
-      start: "bottom center+=300",
-      end: "bottom center",
+      start: "center 0%",
+      end: "center 0%",
       toggleActions: "play none reverse none",
     },
     display: "none",
@@ -3390,8 +3514,8 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s28",
-      start: "center bottom",
-      end: "center bottom-=300",
+      start: "center 100%",
+      end: "center 60%",
       scrub: true,
     },
     opacity: 0,
@@ -3405,8 +3529,8 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s28",
-      start: "bottom center+=300",
-      end: "bottom center",
+      start: "center 50%",
+      end: "center 20%",
       scrub: true,
     },
     opacity: 0,
