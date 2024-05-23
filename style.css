@@ -1158,4 +1158,8 @@ p {
   .slide--s3__content {
     margin: auto;
   }
+
+  .slide--313__content .s3_text {
+    font-size: 20px;
+  }
 }
