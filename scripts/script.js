@@ -1326,7 +1326,7 @@ gsap.to(
       toggleActions: "play none reverse none",
     },
     opacity: 0,
-    width: "0vw",
+    width: "0px",
     y: "-100vh",
     ease: "expo.inOut",
   },
