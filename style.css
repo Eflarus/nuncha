@@ -1001,12 +1001,15 @@ p {
 }
 
 @media (min-width: 768px) {
+  .slide--310__img3 {
+    margin-top: 24vh;
+  }
   .mdh {
     display: none !important;
   }
   .slide--39__content .pair-txt {
     justify-content: space-between;
-    width:80vw;
+    width: 80vw;
     margin: 0 auto;
   }
   .slide--39__content .pair-txt h3 {
@@ -1018,7 +1021,7 @@ p {
   .s3 p,
   .slide--37__content .s3_text,
   .s3_text {
-    font-size: 20px;
+    font-size: 18px;
   }
   h3 {
     font-size: 20px;
@@ -1055,12 +1058,68 @@ p {
     object-fit: cover;
   }
   .slide--8__content,
-  .slide--7__content {
+  .slide--7__content,
+  .slide--4__content {
+    width: 80vw;
     left: 0;
     margin: auto;
   }
+  .slide--8__content img,
+  .slide--7__content img,
+  .slide--4__content img {
+    width: 80vw;
+  }
   .slide--34__content .rcol p {
     text-align: start;
+  }
+
+  .slide--4__img2 {
+    height: 10vw;
+    width: 15vw;
+    right: 40%;
+    top: 24%;
+    background-position: 51% 26.7%;
+    background-size: 80vw auto;
+  }
+
+  .slide--4__img3 {
+    height: 12vw;
+    width: 12vw;
+    background-position: 0% 50.3%;
+    background-size: 80vw auto;
+  }
+  .slide--4__img4 {
+    height: 16vw;
+    width: 16vw;
+    background-position: 100% 100%;
+    background-size: 80vw auto;
+  }
+
+  .slide--7__img3 {
+    right: 34%;
+    top: 49%;
+    background-position: 58% 55.5%;
+    background-size: 80vw auto;
+  }
+  .slide--7__img2 {
+    left: 34%;
+    top: 38%;
+    background-position: -79.9% 43%;
+    background-size: 80vw auto;
+  }
+  .slide--8__img3 {
+    right: 3%;
+    bottom: 6%;
+    background-position: 96% 93.4%;
+    background-size: 80vw auto;
+  }
+  .slide--8__img2 {
+    height: 12vw;
+    width: 13vw;
+    left: 46%;
+    top: 9%;
+    background-position: -64.5% 10.2%;
+    background-size: 80vw auto;
   }
 
   .slide--37__content img {
@@ -1147,7 +1206,7 @@ p {
     width: 90vw;
   }
   .slide--s3__img {
-    max-height: 26vh;
+    max-height: 50vh;
     max-width: 90vw;
   }
   .slide--317__content {
@@ -1161,5 +1220,12 @@ p {
 
   .slide--313__content .s3_text {
     font-size: 20px;
+  }
+
+  .slide--310 .col-l,
+  .slide--310 .col-r {
+    justify-content: center;
+    gap: 20px;
+    height: initial;
   }
 }

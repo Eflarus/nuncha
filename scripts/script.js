@@ -1756,12 +1756,12 @@ gsap.to("#slide-34-img2", {
   scrollTrigger: {
     trigger: ".s14",
     start: "50% 70%", // Начало анимации
-    end: "60% 30%",   // Конец анимации
-    scrub: true,   
-    toggleActions: "play none reverse none"
+    end: "60% 30%", // Конец анимации
+    scrub: true,
+    toggleActions: "play none reverse none",
   },
-  opacity: 0,          // Конечное значение прозрачности
-  ease: "expo.inOut"   // Тип эйзинга
+  opacity: 0, // Конечное значение прозрачности
+  ease: "expo.inOut", // Тип эйзинга
 });
 
 gsap.fromTo(
@@ -1772,7 +1772,7 @@ gsap.fromTo(
       start: "60% 20%",
       end: "60% 0%",
       scrub: true,
-      
+
       toggleActions: "play none reverse none",
     },
     opacity: 1,
@@ -1989,8 +1989,34 @@ gsap.fromTo(
       scrub: true,
     },
     opacity: 0,
+    maxHeight: "0vh",
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s16",
+      start: "center 80%",
+      end: "center 50%",
+      scrub: true,
+    },
+    opacity: 1,
+    maxHeight: "90vh",
+    ease: "expo.inOut",
+  },
+  2
+);
+
+gsap.fromTo(
+  ".slide--36 .slide--36__img1",
+  {
+    scrollTrigger: {
+      trigger: ".s16",
+      start: "center 80%",
+      end: "center 50%",
+      scrub: true,
+    },
+    opacity: 0,
     x: "100vw",
-    height: "0vh",
     ease: "expo.inOut",
   },
   {
@@ -2002,7 +2028,6 @@ gsap.fromTo(
     },
     opacity: 1,
     x: "0vw",
-    height: "70vh",
     ease: "expo.inOut",
   },
   2
@@ -2066,7 +2091,6 @@ gsap.from(
       scrub: true,
     },
     opacity: 0,
-    y: "100vw",
     ease: "expo.inOut",
   },
   2
@@ -2137,7 +2161,7 @@ gsap.to(
     },
     opacity: 0,
     height: 0,
-    y: "-100vw",
+    // y: "-100vw",
     ease: "expo.inOut",
   },
   2
@@ -2154,7 +2178,7 @@ gsap.from(
     },
     opacity: 0,
     height: 0,
-    y: "100vw",
+    // y: "100vw",
     ease: "expo.inOut",
   },
   2
@@ -2220,7 +2244,7 @@ gsap.fromTo(
   2
 );
 
-gsap.fromTo(
+gsap.from(
   ".slide--38 .slide--38__img1",
   {
     scrollTrigger: {
@@ -2234,6 +2258,11 @@ gsap.fromTo(
     y: "100vh",
     ease: "expo.inOut",
   },
+  2
+);
+
+gsap.to(
+  ".slide--38 .slide--38__img1",
   {
     scrollTrigger: {
       trigger: ".s18",
@@ -2241,8 +2270,6 @@ gsap.fromTo(
       end: "center center",
       scrub: true,
     },
-    opacity: 1,
-    height: "60vh",
     y: "0vh",
     ease: "expo.inOut",
   },
