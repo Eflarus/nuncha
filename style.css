@@ -1172,6 +1172,7 @@ p {
   .slide--m2__content .card-link img {
     object-fit: contain;
     flex: 50% 0 0;
+    max-width: 40vw;
   }
   .slide--m2__content .card-link p {
     font-size: 14px;
