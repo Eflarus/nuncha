@@ -791,7 +791,7 @@ gsap.from(
       scrub: true,
     },
     x: "50vw",
-    width: 0,
+    width: "0px",
     flex: "0% 0 0",
     opacity: 0,
     ease: "expo",
