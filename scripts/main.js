@@ -175,7 +175,6 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s01",
       scrub: true,
-      markers: true,
       start: "90% 50%",
       end: "100% 50%",
       toggleActions: "play none reverse none",
@@ -246,7 +245,6 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s02",
       scrub: true,
-      markers: true,
       start: "90% 50%",
       end: "100% 50%",
       toggleActions: "play none reverse none",
@@ -331,7 +329,6 @@ gsap.to(
     scrollTrigger: {
       trigger: ".s03",
       scrub: true,
-      markers: true,
       start: "90% 50%",
       end: "100% 50%",
       toggleActions: "play none reverse none",
