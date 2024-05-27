@@ -81,6 +81,10 @@ body {
   filter: blur(14px);
 }
 
+.hide-to-hide {
+  opacity: 0;
+}
+
 /* transforms end */
 
 .slow-transition {
@@ -426,7 +430,7 @@ p {
   position: absolute;
   width: 40vw;
   height: 100vh;
-  background-image: url("./img/m2bg.jpg");
+  background-image: url("./img/slide-520.jpg");
   background-position: 80% bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -914,13 +918,15 @@ p {
 
 .slide--37__content {
   flex-direction: row;
-  height: 50vh;
+  height: 90vh;
 }
-
+.slide--37 {
+  justify-content: center;
+}
 .slide--37__content .col-txt {
   margin-top: auto;
   margin-bottom: auto;
-  flex: 30% 0;
+  flex: 16% 0;
 }
 
 .slide--37__content .s3_text {
@@ -928,8 +934,9 @@ p {
 }
 .slide--37__content img {
   position: "absolute";
-  flex: 30% 0;
+  flex: 42% 0;
   object-fit: contain;
+  margin:auto;
 }
 
 .pair-txt h3 {
@@ -1234,7 +1241,7 @@ p {
 .slide--54__content .rcol,
 .slide--55__content .lcol,
 .slide--56__content .lcol,
-.slide--58__content .rcol{
+.slide--58__content .rcol {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1267,7 +1274,7 @@ p {
   font-size: 60px;
   padding-left: 16px;
 }
-.slide--54__content .s3_text,
+
 .slide--57__content .s3_text {
   font-size: 24px;
   text-align: left;
@@ -1275,6 +1282,7 @@ p {
 .slide--57__content .s3_title {
   font-size: 180px;
 }
+.slide--54__content .s3_text,
 .slide--55__content .s3_text,
 .slide--56__content .s3_text,
 .slide--58__content .s3_text,
@@ -1282,7 +1290,11 @@ p {
   font-size: 24px;
   text-align: center;
 }
-.slide--59__content .s3_text{
+.slide--55__content .s3_text {
+  font-size: 36px;
+  text-align: center;
+}
+.slide--59__content .s3_text {
   max-width: 60vw;
 }
 .slide--55__content .s3_title {
@@ -1291,7 +1303,7 @@ p {
 }
 .slide--56__content .s3_title {
   font-size: 178px;
-  text-align: center;
+  text-align: left;
 }
 .slide--54__content .s3_title {
   font-size: 24px;
@@ -1571,7 +1583,9 @@ p {
     justify-content: center;
     flex-direction: column;
   }
-  .slide--53 .s3_title,
+  .slide--53 .s3_title{
+    font-size: 24px;
+  }
   .slide--55__content .s3_title,
   .slide--56__content .s3_title {
     font-size: 30px;
@@ -1627,6 +1641,8 @@ p {
   }
 
   .slide--m1__content {
+    text-align: end;
+    color: white;
     flex-direction: column;
     left: 0vw;
     width: 90vw;
@@ -1642,6 +1658,7 @@ p {
   }
 
   .slide--m1__img {
+    background-image: url("./img/slide-521.jpg");
     width: 100vw;
     background-size: cover;
     background-position: bottom;
