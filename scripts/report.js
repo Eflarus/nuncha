@@ -22,11 +22,18 @@ gsap.from(
       end: "40% 40%",
       scrub: true,
       toggleActions: "play none reverse none",
-      // markers: true,
 
       onLeave: () => {
-        console.log("onLeaveLink");
-        window.location.href = "./project.html";
+        setTimeout(() => {
+          console.log("onLeaveLink");
+          window.scrollTo(0, 1);
+          window.location.href = "./project.html";
+          
+          
+
+        }, 500);
+        
+       
       },
     },
     width: "0vw",
