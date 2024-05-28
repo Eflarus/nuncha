@@ -367,7 +367,7 @@ gsap.to(
     },
     opacity: 0,
     y: "-100vh",
-    ease: "expo.out",
+    ease: "expo",
   },
   2
 );
@@ -736,10 +736,37 @@ gsap.from(
       end: "70% 60%",
       scrub: true,
     },
-    x: "-50vw",
-    width: 0,
-    flex: "0% 0 0",
+    flex: "0 0 0",
     opacity: 0,
+    ease: "expo",
+  },
+  2
+);
+
+gsap.fromTo(
+  ".slide--54 .lcol img",
+  {
+    scrollTrigger: {
+      trigger: ".s54",
+      start: "40% 60%",
+      end: "70% 60%",
+      scrub: true,
+    },
+    maxWidth: "0vw",
+    maxHeight: "0vh",
+    opacity: 0,
+    ease: "expo",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s54",
+      start: "40% 60%",
+      end: "70% 60%",
+      scrub: true,
+    },
+    maxWidth: "80vw",
+    maxHeight: "80vh",
+    opacity: 1,
     ease: "expo",
   },
   2
@@ -751,7 +778,7 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s54",
       scrub: true,
-      start: "80% 70%",
+      start: "70% 70%",
       end: "100% 20%",
       toggleActions: "play none reverse none",
     },
@@ -778,7 +805,7 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s54",
       scrub: true,
-      start: "80% 70%",
+      start: "70% 70%",
       end: "100% 20%",
       toggleActions: "play none reverse none",
     },
@@ -848,6 +875,21 @@ gsap.from(
   2
 );
 
+gsap.to(
+  ".slide--55 .lcol",
+  {
+    scrollTrigger: {
+      trigger: ".s55",
+      start: "40% 60%",
+      end: "70% 60%",
+      scrub: true,
+    },
+    transform: "scale(0.8)",
+    ease: "expo",
+  },
+  2
+);
+
 gsap.from(
   ".slide--55 .rcol",
   {
@@ -858,9 +900,7 @@ gsap.from(
       scrub: true,
     },
     x: "50vw",
-    width: "0px",
-    height: "0px",
-    // flex: "0% 0 0",
+    flex: "0 0 0",
     opacity: 0,
     ease: "expo",
   },
@@ -876,8 +916,8 @@ gsap.from(
       scrub: true,
     },
     x: "50vw",
-    width: "0px",
-    height: "0px",
+    maxWidth: "0px",
+    maxHeight: "0px",
     opacity: 0,
     ease: "expo",
   },
@@ -1102,44 +1142,63 @@ gsap.from(
       scrub: true,
     },
     width: 0,
-    flex: "0% 0 0",
+    height: "0svh",
+    // flex: "0% 0 0",
     opacity: 0,
     ease: "expo",
   },
   2
 );
 
-gsap.to(
-  ".slide--57 ",
+gsap.from(
+  ".slide--57 .ccol img",
   {
     scrollTrigger: {
       trigger: ".s58",
+      start: "45% 50%",
+      end: "75% 60%",
       scrub: true,
-      start: "80% 70%",
-      end: "100% 20%",
-      toggleActions: "play none reverse none",
     },
-    y: "-100vh",
+    width: 0,
+    maxHeight: 0,
+    opacity: 0,
     ease: "expo",
   },
+
   2
 );
 
-gsap.to(
-  ".slide--57",
-  {
-    scrollTrigger: {
-      trigger: ".s58",
-      scrub: true,
-      start: "100% 50%",
-      end: "100% 50%",
-      toggleActions: "play none reverse none",
-    },
-    display: "none",
-    ease: "expo.inOut",
-  },
-  2
-);
+// gsap.to(
+//   ".slide--57 ",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s58",
+//       scrub: true,
+//       start: "80% 70%",
+//       end: "100% 20%",
+//       toggleActions: "play none reverse none",
+//     },
+//     y: "-100vh",
+//     ease: "expo",
+//   },
+//   2
+// );
+
+// gsap.to(
+//   ".slide--57",
+//   {
+//     scrollTrigger: {
+//       trigger: ".s58",
+//       scrub: true,
+//       start: "100% 50%",
+//       end: "100% 50%",
+//       toggleActions: "play none reverse none",
+//     },
+//     display: "none",
+//     ease: "expo.inOut",
+//   },
+//   2
+// );
 
 // slide 5 8
 
@@ -1184,9 +1243,27 @@ gsap.from(
       end: "70% 60%",
       scrub: true,
     },
-    y: "-50vh",
-    width: 0,
-    flex: "0% 0 0",
+
+    x: "-50vw",
+    flex: "0 0 0",
+    opacity: 0,
+    ease: "expo.out",
+  },
+  2
+);
+
+gsap.from(
+  ".slide--58 .lcol img",
+  {
+    scrollTrigger: {
+      trigger: ".s57",
+      start: "40% 60%",
+      end: "70% 60%",
+      scrub: true,
+    },
+
+    maxWidth: 0,
+    maxHeight: 0,
     opacity: 0,
     ease: "expo.out",
   },
@@ -1313,8 +1390,8 @@ gsap.from(
   {
     scrollTrigger: {
       trigger: ".s59",
-      start: "40% 60%",
-      end: "70% 60%",
+      start: "0% 50%",
+      end: "40% 60%",
       scrub: true,
     },
     y: "20vh",
@@ -1402,7 +1479,7 @@ gsap.from(
       scrub: true,
     },
     opacity: 0,
-    height: 0,
+    maxHeight: 0,
     y: "-100vh",
     ease: "expo",
   },
@@ -2210,7 +2287,7 @@ gsap.to(
       trigger: ".s9",
       scrub: true,
       start: "80% 70%",
-      end: "bottom 20%",
+      end: "bottom 40%",
       toggleActions: "play none reverse none",
     },
     opacity: 0,
@@ -2236,6 +2313,8 @@ gsap.to(
   },
   2
 );
+
+
 
 // reds
 gsap.fromTo(
@@ -2543,7 +2622,9 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".s10",
       start: "bottom bottom",
+      toggleActions: "play none reverse none",
       end: "bottom center",
+      toggleActions: "play none reverse none",
       scrub: true,
     },
     y: "0vh",
@@ -2553,6 +2634,35 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".s10",
+      start: "bottom bottom",
+      toggleActions: "play none reverse none",
+      end: "bottom center",
+      toggleActions: "play none reverse none",
+      scrub: true,
+    },
+    y: "-100vh",
+    opacity: 0,
+    ease: "expo.inOut",
+  },
+  2
+);
+
+gsap.fromTo(
+  ".header",
+  {
+    scrollTrigger: {
+      trigger: ".s50",
+      start: "bottom bottom",
+      end: "bottom center",
+      scrub: true,
+    },
+    y: "0vh",
+    opacity: 1,
+    ease: "expo.inOut",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".s50",
       start: "bottom bottom",
       end: "bottom center",
       scrub: true,
